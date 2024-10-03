@@ -1,0 +1,82 @@
+.TH sysopctl 1 "October 2024" "v0.1.0" "System Management Script"
+.SH NAME
+sysopctl \- A script for managing system services, monitoring system load, and performing various administrative tasks.
+.SH SYNOPSIS
+.B sysopctl
+.RI [ command ] [ options ]
+.SH DESCRIPTION
+.B sysopctl
+is a Bash script designed to assist in managing services, viewing system status, and performing system administration tasks. 
+
+Commands include listing services, viewing system load, starting or stopping services, checking disk usage, monitoring processes, analyzing system logs, and performing backups.
+
+.SH OPTIONS
+.TP
+.BI service\  list
+List all running system services.
+.TP
+.BI service\  start\  <service>
+Start a specified service.
+.TP
+.BI service\  stop\  <service>
+Stop a specified service.
+.TP
+.BI system\  load
+Display system load using
+.B uptime.
+.TP
+.BI disk\  usage
+Show disk usage of all mounted partitions using
+.B df -h.
+.TP
+.BI process\  monitor
+Monitor system processes using
+.B htop.
+.TP
+.BI logs\  analyze
+Analyze system logs using
+.B journalctl.
+.TP
+.BI backup\  <path>
+Backup specified files or directories to the current directory using
+.B rsync.
+.TP
+.B \-\-version
+Display the script version.
+.TP
+.B \-\-help
+Display help information and usage.
+
+.SH EXAMPLES
+.TP
+.B sysopctl service list
+List all running system services.
+.TP
+.B sysopctl system load
+View the system load averages.
+.TP
+.B sysopctl service start nginx
+Start the
+.B nginx
+service.
+.TP
+.B sysopctl disk usage
+Display the current disk usage.
+.TP
+.B sysopctl process monitor
+Open a real-time process monitor.
+.TP
+.B sysopctl logs analyze
+Analyze the system's logs.
+.TP
+.B sysopctl backup /path/to/directory
+Backup the specified directory to the current working directory.
+.TP
+.B sysopctl \-\-version
+Display the script version information.
+
+.SH AUTHOR
+Developed by Shweta verma.
+.SH VERSION
+v0.1.0
+
